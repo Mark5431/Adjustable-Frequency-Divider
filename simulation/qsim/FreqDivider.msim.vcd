@@ -1,0 +1,664 @@
+$comment
+	File created using the following command:
+		vcd file FreqDivider.msim.vcd -direction
+$end
+$date
+	Sun Dec 10 16:13:19 2023
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module FreqDivider_vlg_vec_tst $end
+$var reg 1 ! LOAD_D $end
+$var reg 1 " LOAD_P $end
+$var reg 3 # PAR_LOAD [2:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % reset $end
+$var wire 1 & Qn [2] $end
+$var wire 1 ' Qn [1] $end
+$var wire 1 ( Qn [0] $end
+$var wire 1 ) Qnxt [2] $end
+$var wire 1 * Qnxt [1] $end
+$var wire 1 + Qnxt [0] $end
+$var wire 1 , d_active $end
+$var wire 1 - dcounter [2] $end
+$var wire 1 . dcounter [1] $end
+$var wire 1 / dcounter [0] $end
+$var wire 1 0 dmax [2] $end
+$var wire 1 1 dmax [1] $end
+$var wire 1 2 dmax [0] $end
+$var wire 1 3 out $end
+$var wire 1 4 p_active $end
+$var wire 1 5 pcounter [2] $end
+$var wire 1 6 pcounter [1] $end
+$var wire 1 7 pcounter [0] $end
+$var wire 1 8 pmax [2] $end
+$var wire 1 9 pmax [1] $end
+$var wire 1 : pmax [0] $end
+
+$scope module i1 $end
+$var wire 1 ; gnd $end
+$var wire 1 < vcc $end
+$var wire 1 = unknown $end
+$var tri1 1 > devclrn $end
+$var tri1 1 ? devpor $end
+$var tri1 1 @ devoe $end
+$var wire 1 A ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 B ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 C ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 D p_active~output_o $end
+$var wire 1 E d_active~output_o $end
+$var wire 1 F pmax[0]~output_o $end
+$var wire 1 G pmax[1]~output_o $end
+$var wire 1 H pmax[2]~output_o $end
+$var wire 1 I dmax[0]~output_o $end
+$var wire 1 J dmax[1]~output_o $end
+$var wire 1 K dmax[2]~output_o $end
+$var wire 1 L out~output_o $end
+$var wire 1 M pcounter[0]~output_o $end
+$var wire 1 N pcounter[1]~output_o $end
+$var wire 1 O pcounter[2]~output_o $end
+$var wire 1 P dcounter[0]~output_o $end
+$var wire 1 Q dcounter[1]~output_o $end
+$var wire 1 R dcounter[2]~output_o $end
+$var wire 1 S Qn[0]~output_o $end
+$var wire 1 T Qn[1]~output_o $end
+$var wire 1 U Qn[2]~output_o $end
+$var wire 1 V Qnxt[0]~output_o $end
+$var wire 1 W Qnxt[1]~output_o $end
+$var wire 1 X Qnxt[2]~output_o $end
+$var wire 1 Y clk~input_o $end
+$var wire 1 Z clk~inputclkctrl_outclk $end
+$var wire 1 [ reset~input_o $end
+$var wire 1 \ pcounter[2]~2_combout $end
+$var wire 1 ] PAR_LOAD[2]~input_o $end
+$var wire 1 ^ pmax~5_combout $end
+$var wire 1 _ LOAD_P~input_o $end
+$var wire 1 ` LOAD_D~input_o $end
+$var wire 1 a dmax[0]~0_combout $end
+$var wire 1 b dmax[2]~reg0_q $end
+$var wire 1 c PAR_LOAD[1]~input_o $end
+$var wire 1 d PAR_LOAD[0]~input_o $end
+$var wire 1 e pmax~4_combout $end
+$var wire 1 f dmax[1]~reg0_q $end
+$var wire 1 g pmax~0_combout $end
+$var wire 1 h dmax[0]~reg0feeder_combout $end
+$var wire 1 i dmax[0]~reg0_q $end
+$var wire 1 j pmax[0]~1_combout $end
+$var wire 1 k pmax[0]~2_combout $end
+$var wire 1 l pmax[0]~3_combout $end
+$var wire 1 m pmax[2]~reg0_q $end
+$var wire 1 n pcounter[2]~3_combout $end
+$var wire 1 o pcounter[2]~reg0_q $end
+$var wire 1 p pmax[0]~reg0_q $end
+$var wire 1 q pcounter~4_combout $end
+$var wire 1 r pcounter[0]~reg0_q $end
+$var wire 1 s pmax[1]~reg0_q $end
+$var wire 1 t pcounter~1_combout $end
+$var wire 1 u pcounter[1]~reg0_q $end
+$var wire 1 v pcounter[2]~0_combout $end
+$var wire 1 w Mux3~0_combout $end
+$var wire 1 x dcounter~1_combout $end
+$var wire 1 y dcounter[0]~reg0_q $end
+$var wire 1 z Add1~0_combout $end
+$var wire 1 { dcounter~2_combout $end
+$var wire 1 | dcounter[1]~reg0_q $end
+$var wire 1 } Mux3~2_combout $end
+$var wire 1 ~ dcounter~0_combout $end
+$var wire 1 !! dcounter[2]~reg0_q $end
+$var wire 1 "! d_active~0_combout $end
+$var wire 1 #! Mux2~0_combout $end
+$var wire 1 $! Qn~2_combout $end
+$var wire 1 %! Qn[0]~reg0_q $end
+$var wire 1 &! Mux1~0_combout $end
+$var wire 1 '! Qn~0_combout $end
+$var wire 1 (! Qn[1]~reg0_q $end
+$var wire 1 )! Mux0~0_combout $end
+$var wire 1 *! Qn~1_combout $end
+$var wire 1 +! Qn[2]~reg0_q $end
+$var wire 1 ,! Mux3~1_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+b11 #
+0$
+0%
+0(
+0'
+0&
+0+
+0*
+0)
+0,
+0/
+0.
+0-
+02
+01
+00
+03
+04
+07
+06
+05
+0:
+09
+08
+0;
+1<
+x=
+1>
+1?
+1@
+0A
+zB
+zC
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+1`
+1a
+0b
+1c
+1d
+1e
+0f
+1g
+1h
+0i
+1j
+1k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+1v
+0w
+0x
+0y
+0z
+0{
+0|
+1}
+0~
+0!!
+1"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+$end
+#10000
+1$
+1Y
+1Z
+1i
+1f
+1J
+1I
+0j
+12
+11
+1x
+1{
+0k
+#20000
+b1 #
+b0 #
+0!
+1"
+0$
+0Y
+1_
+0`
+0c
+0d
+0Z
+0a
+0g
+0e
+0h
+#30000
+1$
+1Y
+1Z
+1|
+1y
+1P
+1Q
+0}
+1w
+1.
+1/
+#40000
+0"
+0$
+0Y
+0_
+0Z
+#50000
+1$
+1Y
+1Z
+#60000
+0$
+0Y
+0Z
+#70000
+1$
+1Y
+1Z
+#80000
+0$
+0Y
+0Z
+#90000
+1$
+1Y
+1Z
+#100000
+0$
+0Y
+0Z
+#110000
+1$
+1Y
+1Z
+#120000
+0$
+0Y
+0Z
+#130000
+1$
+1Y
+1Z
+#140000
+0$
+0Y
+0Z
+#150000
+1$
+1Y
+1Z
+#160000
+0$
+0Y
+0Z
+#170000
+1$
+1Y
+1Z
+#180000
+0$
+0Y
+0Z
+#190000
+1$
+1Y
+1Z
+#200000
+0$
+0Y
+0Z
+#210000
+1$
+1Y
+1Z
+#220000
+0$
+0Y
+0Z
+#230000
+1$
+1Y
+1Z
+#240000
+0$
+0Y
+0Z
+#250000
+1$
+1Y
+1Z
+#260000
+0$
+0Y
+0Z
+#270000
+1$
+1Y
+1Z
+#280000
+0$
+0Y
+0Z
+#290000
+1$
+1Y
+1Z
+#300000
+0$
+0Y
+0Z
+#310000
+1$
+1Y
+1Z
+#320000
+0$
+0Y
+0Z
+#330000
+1$
+1Y
+1Z
+#340000
+0$
+0Y
+0Z
+#350000
+1$
+1Y
+1Z
+#360000
+0$
+0Y
+0Z
+#370000
+1$
+1Y
+1Z
+#380000
+0$
+0Y
+0Z
+#390000
+1$
+1Y
+1Z
+#400000
+0$
+0Y
+0Z
+#410000
+1$
+1Y
+1Z
+#420000
+0$
+0Y
+0Z
+#430000
+1$
+1Y
+1Z
+#440000
+0$
+0Y
+0Z
+#450000
+1$
+1Y
+1Z
+#460000
+0$
+0Y
+0Z
+#470000
+1$
+1Y
+1Z
+#480000
+0$
+0Y
+0Z
+#490000
+1$
+1Y
+1Z
+#500000
+0$
+0Y
+0Z
+#510000
+1$
+1Y
+1Z
+#520000
+0$
+0Y
+0Z
+#530000
+1$
+1Y
+1Z
+#540000
+0$
+0Y
+0Z
+#550000
+1$
+1Y
+1Z
+#560000
+0$
+0Y
+0Z
+#570000
+1$
+1Y
+1Z
+#580000
+0$
+0Y
+0Z
+#590000
+1$
+1Y
+1Z
+#600000
+0$
+0Y
+0Z
+#610000
+1$
+1Y
+1Z
+#620000
+0$
+0Y
+0Z
+#630000
+1$
+1Y
+1Z
+#640000
+0$
+0Y
+0Z
+#650000
+1$
+1Y
+1Z
+#660000
+0$
+0Y
+0Z
+#670000
+1$
+1Y
+1Z
+#680000
+0$
+0Y
+0Z
+#690000
+1$
+1Y
+1Z
+#700000
+0$
+0Y
+0Z
+#710000
+1$
+1Y
+1Z
+#720000
+0$
+0Y
+0Z
+#730000
+1$
+1Y
+1Z
+#740000
+0$
+0Y
+0Z
+#750000
+1$
+1Y
+1Z
+#760000
+0$
+0Y
+0Z
+#770000
+1$
+1Y
+1Z
+#780000
+0$
+0Y
+0Z
+#790000
+1$
+1Y
+1Z
+#800000
+0$
+0Y
+0Z
+#810000
+1$
+1Y
+1Z
+#820000
+0$
+0Y
+0Z
+#830000
+1$
+1Y
+1Z
+#840000
+0$
+0Y
+0Z
+#850000
+1$
+1Y
+1Z
+#860000
+0$
+0Y
+0Z
+#870000
+1$
+1Y
+1Z
+#880000
+0$
+0Y
+0Z
+#890000
+1$
+1Y
+1Z
+#900000
+0$
+0Y
+0Z
+#910000
+1$
+1Y
+1Z
+#920000
+0$
+0Y
+0Z
+#930000
+1$
+1Y
+1Z
+#940000
+0$
+0Y
+0Z
+#950000
+1$
+1Y
+1Z
+#960000
+0$
+0Y
+0Z
+#970000
+1$
+1Y
+1Z
+#980000
+0$
+0Y
+0Z
+#990000
+1$
+1Y
+1Z
+#1000000

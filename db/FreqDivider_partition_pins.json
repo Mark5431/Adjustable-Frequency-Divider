@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "p_active",
+					"strict" : false
+				},
+				{
+					"name" : "d_active",
+					"strict" : false
+				},
+				{
+					"name" : "period[0]",
+					"strict" : false
+				},
+				{
+					"name" : "period[1]",
+					"strict" : false
+				},
+				{
+					"name" : "period[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dutyFrac[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dutyFrac[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dutyFrac[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out",
+					"strict" : false
+				},
+				{
+					"name" : "pcounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pcounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pcounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dcounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dcounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dcounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Qn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Qn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Qn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Qnxt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Qnxt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Qnxt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD_P",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD_D",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
