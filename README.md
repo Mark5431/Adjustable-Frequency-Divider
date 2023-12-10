@@ -7,6 +7,9 @@ Click [here](https://github.com/Mark5431/Adjustable-Frequency-Divider/archive/re
 ## Usage
 1) Set your desired duty cycle in fractions compared to the period (0-6) on the first positive edge.
 2) Set your desired period (2-6) on the second positive edge.
+
+## Example
 eg: Duty Cycle = 3, Period = 5,
     Output: 111001110011100..
+
 NOTE: Duty cycle should not exceed period in any cases when simulating.
