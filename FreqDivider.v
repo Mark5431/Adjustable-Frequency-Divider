@@ -38,7 +38,7 @@ module FreqDivider(
 		end
 		else begin
 			Qn <= Qnxt;
-			period <= (LOAD_P && (PAR_LOAD > dutyFrac) && (PAR_LOAD >= 2)) ? PAR_LOAD : period;
+			period <= (LOAD_P && (PAR_LOAD >= dutyFrac) && (PAR_LOAD >= 2)) ? PAR_LOAD : period;
 			dutyFrac <= LOAD_D ? PAR_LOAD : dutyFrac;
 			pcounter <= p_active ? pcounter - 3'd1 : period;
 			dcounter <= d_active ? dcounter - 3'd1 : (p_active ? 3'd0 : dutyFrac);

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/10/2023 16:13:16"
+// Generated on "12/11/2023 19:33:09"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          FreqDivider
 // 
@@ -39,11 +39,11 @@ wire [2:0] Qn;
 wire [2:0] Qnxt;
 wire d_active;
 wire [2:0] dcounter;
-wire [2:0] dmax;
+wire [2:0] dutyFrac;
 wire out;
 wire p_active;
 wire [2:0] pcounter;
-wire [2:0] pmax;
+wire [2:0] period;
 
 // assign statements (if any)                          
 FreqDivider i1 (
@@ -56,11 +56,11 @@ FreqDivider i1 (
 	.clk(clk),
 	.d_active(d_active),
 	.dcounter(dcounter),
-	.dmax(dmax),
+	.dutyFrac(dutyFrac),
 	.out(out),
 	.p_active(p_active),
 	.pcounter(pcounter),
-	.pmax(pmax),
+	.period(period),
 	.reset(reset)
 );
 initial 
@@ -85,12 +85,14 @@ end
 initial
 begin
 	PAR_LOAD[2] = 1'b0;
+	PAR_LOAD[2] = #20000 1'b1;
+	PAR_LOAD[2] = #20000 1'b0;
 end 
 // PAR_LOAD[ 1 ]
 initial
 begin
 	PAR_LOAD[1] = 1'b1;
-	PAR_LOAD[1] = #20000 1'b0;
+	PAR_LOAD[1] = #40000 1'b0;
 end 
 // PAR_LOAD[ 0 ]
 initial

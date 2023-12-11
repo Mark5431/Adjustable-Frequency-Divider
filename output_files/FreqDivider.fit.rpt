@@ -1,5 +1,5 @@
 Fitter report for FreqDivider
-Sun Dec 10 17:50:00 2023
+Mon Dec 11 19:29:28 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Dec 10 17:50:00 2023       ;
+; Fitter Status                      ; Successful - Mon Dec 11 19:29:28 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FreqDivider                                 ;
 ; Top-level Entity Name              ; FreqDivider                                 ;
@@ -154,8 +154,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
-;     Processors 3-4         ;   0.7%      ;
+;     Processors 2-4         ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -244,7 +243,7 @@ The pin-out file can be found in C:/intelFPGA_lite/18.1/FreqDivider/output_files
 ; Remote update blocks                        ; 0 / 1 ( 0 % )        ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%   ;
-; Peak interconnect usage (total/H/V)         ; 0.6% / 0.5% / 0.7%   ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.4% / 0.7%   ;
 ; Maximum fan-out                             ; 15                   ;
 ; Highest non-global fan-out                  ; 15                   ;
 ; Total fan-out                               ; 184                  ;
@@ -1076,12 +1075,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Block interconnects   ; 50 / 27,275 ( < 1 % ) ;
 ; C16 interconnects     ; 0 / 1,240 ( 0 % )     ;
-; C4 interconnects      ; 28 / 20,832 ( < 1 % ) ;
-; Direct links          ; 10 / 27,275 ( < 1 % ) ;
+; C4 interconnects      ; 26 / 20,832 ( < 1 % ) ;
+; Direct links          ; 11 / 27,275 ( < 1 % ) ;
 ; Global clocks         ; 1 / 10 ( 10 % )       ;
-; Local interconnects   ; 23 / 8,064 ( < 1 % )  ;
+; Local interconnects   ; 24 / 8,064 ( < 1 % )  ;
 ; R24 interconnects     ; 0 / 1,320 ( 0 % )     ;
-; R4 interconnects      ; 26 / 28,560 ( < 1 % ) ;
+; R4 interconnects      ; 23 / 28,560 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
@@ -1397,18 +1396,18 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/FreqDivider/output_files/FreqDivider.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 5548 megabytes
-    Info: Processing ended: Sun Dec 10 17:50:00 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Mon Dec 11 19:29:28 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
