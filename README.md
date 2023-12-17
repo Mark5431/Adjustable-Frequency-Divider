@@ -1,5 +1,5 @@
-# Periodic-Signal-Generator
-Periodic Signal Generator Mini-Project for Digital Electronics II
+# Configurable-Frequency-Divider
+Configurable Frequency Divider Mini-Project for Digital Electronics II
 
 ## Installation
 Click [here](https://github.com/Mark5431/Adjustable-Frequency-Divider/archive/refs/heads/main.zip) to install the entire directory as a .zip file. Unzip and put into your own FPGA simulation folders.
