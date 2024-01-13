@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sevenseg0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sevenseg5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out",
+					"strict" : false
+				},
+				{
+					"name" : "outselect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "outselect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outselect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD_D",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PAR_LOAD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LOAD_P",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,14 +1,14 @@
 // Top-level module for Adjustable Frequency Divider 
-module FreqDivider( 
+module testfreq( 
 	input clk, reset, 							// 1-bit synchronous clock and reset
 	input LOAD_P, LOAD_D, 						// 1-bit control signal for period and duty cycle
 	input [2:0] PAR_LOAD, 						// 3-bits parellel load for period and duty cycle counters
-	output p_active, d_active, 				// 1-bit control signals for counters
-	output reg [2:0] period, dutyFrac,  	// 3-bits value holder for period and duty cycle
-	output reg out, 								// 1-bit system output value
-	output reg [2:0] pcounter, dcounter,   // Implement pcounter atleast input 2
-	output reg [2:0] Qn, Qnxt 				 	// 3-bit present state and next state
+	output reg out									// 1-bit system output value
 );
+	reg [2:0] period, dutyFrac;				// 3-bits value holder for period and duty cycle
+	reg [2:0] pcounter, dcounter;   			// Implement pcounter atleast input 2
+	reg [2:0] Qn, Qnxt; 				 			// 3-bit present state and next state
+	wire p_active, d_active; 					// 1-bit control signals for counters
 	
 	// Parameter declaration
 	parameter IDLE = 3'd0,

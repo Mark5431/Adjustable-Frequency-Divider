@@ -7,37 +7,57 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA_lite/18.1/FreqDivider/simulation/qsim
-vFreqDivider
-Z1 !s110 1702294390
+Z0 dC:/intelFPGA_lite/18.1/testfreq/simulation/qsim
+vhard_block
+Z1 !s110 1704993026
 !i10b 1
-!s100 mh]Rhdc[]:@nF7GF82<k<0
-IgaH8d^DATL[H^nQ52AFQS2
+!s100 ^FE[F2[dKldWAI<A7XLOK1
+I>ZMX2D1b0G3Jk@I89LlNd3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1702294390
-Z4 8FreqDivider.vo
-Z5 FFreqDivider.vo
-L0 31
+Z3 w1704993025
+Z4 8testfreq.vo
+Z5 Ftestfreq.vo
+L0 4057
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1702294390.000000
-Z8 !s107 FreqDivider.vo|
-Z9 !s90 -work|work|FreqDivider.vo|
+Z7 !s108 1704993026.000000
+Z8 !s107 testfreq.vo|
+Z9 !s90 -work|work|testfreq.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
-n@freq@divider
-vFreqDivider_vlg_vec_tst
+vtestfreq
 R1
 !i10b 1
-!s100 ;OOmd=VEV6791LB;J93JP1
-IlTjNIMK<3d4_R4ZMkC>4o1
+!s100 ocddFLQ9hYcFaU7F:7XIQ0
+IKeKmNI9[IP[:LR[a^e6Ul2
 R2
 R0
-w1702294389
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtestfreq_vlg_vec_tst
+R1
+!i10b 1
+!s100 oM5fF4E:0;D13B2GnXoSa1
+I3ieTYEBNFZM4CAL5UN3mC2
+R2
+R0
+w1704993024
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
@@ -48,28 +68,6 @@ r1
 R7
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
-!i113 1
-R10
-R11
-n@freq@divider_vlg_vec_tst
-vhard_block
-R1
-!i10b 1
-!s100 zX5nC6U5O23`<2aO1h^DF0
-IYo?7SfMjNh7U^LEiz8`>b3
-R2
-R0
-R3
-R4
-R5
-L0 1417
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
 !i113 1
 R10
 R11

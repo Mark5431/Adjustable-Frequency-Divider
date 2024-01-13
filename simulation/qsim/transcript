@@ -1,28 +1,28 @@
-# do FreqDivider.do
+# do testfreq.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:10 on Dec 11,2023
-# vlog -work work FreqDivider.vo 
-# -- Compiling module FreqDivider
+# Start time: 01:10:26 on Jan 12,2024
+# vlog -work work testfreq.vo 
+# -- Compiling module testfreq
 # -- Compiling module hard_block
 # 
 # Top level modules:
-# 	FreqDivider
-# End time: 19:33:10 on Dec 11,2023, Elapsed time: 0:00:00
+# 	testfreq
+# End time: 01:10:26 on Jan 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:10 on Dec 11,2023
+# Start time: 01:10:26 on Jan 12,2024
 # vlog -work work Waveform.vwf.vt 
-# -- Compiling module FreqDivider_vlg_vec_tst
+# -- Compiling module testfreq_vlg_vec_tst
 # 
 # Top level modules:
-# 	FreqDivider_vlg_vec_tst
-# End time: 19:33:10 on Dec 11,2023, Elapsed time: 0:00:00
+# 	testfreq_vlg_vec_tst
+# End time: 01:10:26 on Jan 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FreqDivider_vlg_vec_tst 
-# Start time: 19:33:10 on Dec 11,2023
-# Loading work.FreqDivider_vlg_vec_tst
-# Loading work.FreqDivider
+# vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.testfreq_vlg_vec_tst 
+# Start time: 01:10:26 on Jan 12,2024
+# Loading work.testfreq_vlg_vec_tst
+# Loading work.testfreq
 # Loading work.hard_block
 # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
 # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
@@ -34,11 +34,14 @@
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: (vsim-3017) FreqDivider.vo(1351): [TFMPC] - Too few port connections. Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /FreqDivider_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/fiftyfivenm_atoms.v
-# ** Warning: (vsim-3722) FreqDivider.vo(1351): [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Warning: (vsim-3017) testfreq.vo(3932): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /testfreq_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/fiftyfivenm_atoms.v
+# ** Warning: (vsim-3722) testfreq.vo(3932): [TFMPC] - Missing connection for port 'clk_dft'.
+# ** Warning: (vsim-3017) testfreq.vo(3955): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /testfreq_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/fiftyfivenm_atoms.v
+# ** Warning: (vsim-3722) testfreq.vo(3955): [TFMPC] - Missing connection for port 'clk_dft'.
 # after#26
-# ** Note: $finish    : Waveform.vwf.vt(68)
-#    Time: 1 us  Iteration: 0  Instance: /FreqDivider_vlg_vec_tst
-# End time: 19:33:11 on Dec 11,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 2
+# ** Note: $finish    : Waveform.vwf.vt(66)
+#    Time: 1 us  Iteration: 0  Instance: /testfreq_vlg_vec_tst
+# End time: 01:10:26 on Jan 12,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4

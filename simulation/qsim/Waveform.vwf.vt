@@ -18,54 +18,85 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/11/2023 19:33:09"
+// Generated on "01/12/2024 01:10:24"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          FreqDivider
+// Verilog Test Bench (with test vectors) for design :                          testfreq
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module FreqDivider_vlg_vec_tst();
+module testfreq_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg LOAD_D;
 reg LOAD_P;
 reg [2:0] PAR_LOAD;
 reg clk;
+reg [2:0] outselect;
 reg reset;
 // wires                                               
-wire [2:0] Qn;
-wire [2:0] Qnxt;
-wire d_active;
-wire [2:0] dcounter;
-wire [2:0] dutyFrac;
 wire out;
-wire p_active;
-wire [2:0] pcounter;
-wire [2:0] period;
+wire [2:0] pinout;
+wire [6:0] sevenseg0;
+wire [6:0] sevenseg1;
+wire [6:0] sevenseg2;
+wire [6:0] sevenseg3;
+wire [6:0] sevenseg5;
 
 // assign statements (if any)                          
-FreqDivider i1 (
+testfreq i1 (
 // port map - connection between master ports and signals/registers   
 	.LOAD_D(LOAD_D),
 	.LOAD_P(LOAD_P),
 	.PAR_LOAD(PAR_LOAD),
-	.Qn(Qn),
-	.Qnxt(Qnxt),
 	.clk(clk),
-	.d_active(d_active),
-	.dcounter(dcounter),
-	.dutyFrac(dutyFrac),
 	.out(out),
-	.p_active(p_active),
-	.pcounter(pcounter),
-	.period(period),
-	.reset(reset)
+	.outselect(outselect),
+	.pinout(pinout),
+	.reset(reset),
+	.sevenseg0(sevenseg0),
+	.sevenseg1(sevenseg1),
+	.sevenseg2(sevenseg2),
+	.sevenseg3(sevenseg3),
+	.sevenseg5(sevenseg5)
 );
 initial 
 begin 
 #1000000 $finish;
+end 
+
+// LOAD_D
+initial
+begin
+	LOAD_D = 1'b1;
+	LOAD_D = #80000 1'b0;
+	LOAD_D = #20000 1'b1;
+end 
+
+// LOAD_P
+initial
+begin
+	LOAD_P = 1'b1;
+	LOAD_P = #20000 1'b0;
+	LOAD_P = #20000 1'b1;
+end 
+// PAR_LOAD[ 2 ]
+initial
+begin
+	PAR_LOAD[2] = 1'b1;
+	PAR_LOAD[2] = #40000 1'b0;
+end 
+// PAR_LOAD[ 1 ]
+initial
+begin
+	PAR_LOAD[1] = 1'b1;
+	PAR_LOAD[1] = #100000 1'b0;
+end 
+// PAR_LOAD[ 0 ]
+initial
+begin
+	PAR_LOAD[0] = 1'b0;
 end 
 
 // clk
@@ -75,45 +106,26 @@ begin
 	clk = #10000 1'b1;
 	#10000;
 end 
+// outselect[ 2 ]
+initial
+begin
+	outselect[2] = 1'b0;
+end 
+// outselect[ 1 ]
+initial
+begin
+	outselect[1] = 1'b1;
+end 
+// outselect[ 0 ]
+initial
+begin
+	outselect[0] = 1'b1;
+end 
 
 // reset
 initial
 begin
 	reset = 1'b0;
-end 
-// PAR_LOAD[ 2 ]
-initial
-begin
-	PAR_LOAD[2] = 1'b0;
-	PAR_LOAD[2] = #20000 1'b1;
-	PAR_LOAD[2] = #20000 1'b0;
-end 
-// PAR_LOAD[ 1 ]
-initial
-begin
-	PAR_LOAD[1] = 1'b1;
-	PAR_LOAD[1] = #40000 1'b0;
-end 
-// PAR_LOAD[ 0 ]
-initial
-begin
-	PAR_LOAD[0] = 1'b1;
-	PAR_LOAD[0] = #20000 1'b0;
-end 
-
-// LOAD_D
-initial
-begin
-	LOAD_D = 1'b1;
-	LOAD_D = #20000 1'b0;
-end 
-
-// LOAD_P
-initial
-begin
-	LOAD_P = 1'b0;
-	LOAD_P = #20000 1'b1;
-	LOAD_P = #20000 1'b0;
 end 
 endmodule
 
