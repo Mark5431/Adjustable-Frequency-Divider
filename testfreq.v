@@ -52,7 +52,7 @@ module testfreq (
 	
 	
 	// Sequential block for the overall system
-	always @ (posedge clk) begin
+	always @ (posedge clk) begin // synchronous reset aswell since based on empirical testing asynchronous sometimes causes timing issues
 		// If RESET signal on, then reset present state, period value and duty cycle fraction value
 		if (reset) begin
 			Qn <= IDLE;
