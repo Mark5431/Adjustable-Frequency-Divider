@@ -3,44 +3,44 @@
 // General workflow of the system: 
 // 	1) Set value and press bottom button (period). (2-6)
 // 	2) Set value and press upper bottom (duty cycle in fractions). (0-6 and smaller than period)
-//    3) Waveform is generated and period and duty cycle can be adjusted 
+//      3) Waveform is generated and period and duty cycle can be adjusted 
 //			anytime as long as values are logical.
 
 module testfreq ( 
 	// I/O Declarations (Verilog 2001 format)
 	output [6:0] sevenseg0, 					// 5 7-bits output vectors for seven segment displays
-					 sevenseg1,
-					 sevenseg2, 
-					 sevenseg3, 
-					 sevenseg5,
+		     sevenseg1,
+		     sevenseg2, 
+		     sevenseg3, 
+		     sevenseg5,
 	input [2:0] outselect, 						// 3-bits output line selection
 	output reg [2:0] pinout,					// 3-bit pinout of the overall system
-	input clk, reset, 							// 1-bit synchronous clock and reset
+	input clk, reset, 						// 1-bit synchronous clock and reset
 	input LOAD_P, LOAD_D, 						// 1-bit control signal for period and duty cycle (active LOW)
 	input [2:0] PAR_LOAD, 						// 3-bits parellel load for period and duty cycle counters
-	output reg out									// 1-bit system output value
+	output reg out							// 1-bit system output value
 );
 
 	
 	// Non I/O Declarations:
 	reg [2:0] period, dutyFrac;				// 3-bits value holder for period and duty cycle
 	reg [2:0] pcounter, dcounter;   			// 3-bit register of counters
-	reg [2:0] Qn, Qnxt; 				 			// 3-bit present state and next state
-	wire p_active, d_active; 					// 1-bit control signals for period and duty cycle counters
+	reg [2:0] Qn, Qnxt; 				 	// 3-bit present state and next state
+	wire p_active, d_active; 				// 1-bit control signals for period and duty cycle counters
 	
 	
 	// Parameter declaration for states
 	parameter IDLE = 3'd0,
-				 S1   = 3'd1,
-				 S2 	= 3'd2,
-				 S3 	= 3'd3,
-				 S4 	= 3'd4,
-				 S5 	= 3'd5;
+		  S1   = 3'd1,
+		  S2   = 3'd2,
+		  S3   = 3'd3,
+		  S4   = 3'd4,
+		  S5   = 3'd5;
 	
 	
 	// Initial reset for present state, period, and duty cycle fraction
 	initial begin
-		Qn 		  = IDLE;
+		Qn 	 = IDLE;
 		period   = 3'd0;
 		dutyFrac = 3'd0;
 	end
@@ -92,7 +92,7 @@ module testfreq (
 	always @ (*) begin
 		case (Qn) // Present state as selector
 			IDLE: {Qnxt, out} = p_active ? {S1,   d_active} : {IDLE, 1'd0};
-			S1	 : {Qnxt, out} = p_active ? {S2,   d_active} : {IDLE, 1'd0}; 
+			S1  : {Qnxt, out} = p_active ? {S2,   d_active} : {IDLE, 1'd0}; 
 			S2  : {Qnxt, out} = p_active ? {S3,   d_active} : {IDLE, 1'd0};
 			S3  : {Qnxt, out} = p_active ? {S4,   d_active} : {IDLE, 1'd0};
 			S4  : {Qnxt, out} = p_active ? {S5,   d_active} : {IDLE, 1'd0};
@@ -116,30 +116,30 @@ endmodule
 // Display module using on-board 7-segment displays
 /*
 	7-bit arrangement: abcdefg
-			 a
+		    a
 		  f   b
-			 g
+		    g
 		  e   c
-			 d
+		    d
 */
 module display (
 	// I/O Declarations
 	output reg [6:0] sevenseg0, 	// 5 7-bit output vectors & registers for seven segment displays
-						  sevenseg1, 
-						  sevenseg2, 
-						  sevenseg3, 
-						  sevenseg5, 
-	input clk,							// 1-bit clock input
-	input [2:0] period, dutyFrac  // 3-bit inputs period and duty fraction
+			 sevenseg1, 
+			 sevenseg2, 
+			 sevenseg3, 
+			 sevenseg5, 
+	input clk,			// 1-bit clock input
+	input [2:0] period, dutyFrac    // 3-bit inputs period and duty fraction
 );
 	
 	// Non I/O Declarations:
-	reg [24:0] delay1s;				// Counter register for 1Hz clock based on 50MHz internal clock
+	reg [24:0] delay1s;			// Counter register for 1Hz clock based on 50MHz internal clock
 
-	reg seconds_clk;					// Resultant 1Hz clock signal 
-	reg state;							// State holder for period/duty cycle display
+	reg seconds_clk;			// Resultant 1Hz clock signal 
+	reg state;				// State holder for period/duty cycle display
 	reg [6:0] period7seg, 			// Value holder in decoded state for period and duty cycle
-				 duty7seg;
+		  duty7seg;
 	
 	
 	// Counter logic for 1Hz clock generator
@@ -185,7 +185,7 @@ module display (
 			3'd4	 : period7seg <= 7'b0110011;
 			3'd5	 : period7seg <= 7'b1011011;
 			3'd6	 : period7seg <= 7'b1011111;
-			default: period7seg <= 7'b1101111;
+			default  : period7seg <= 7'b1101111;
 		endcase
 		// Decoder for duty cycle
 		case (dutyFrac)
@@ -196,7 +196,7 @@ module display (
 			3'd4	 : duty7seg <= 7'b0110011;
 			3'd5	 : duty7seg <= 7'b1011011;
 			3'd6	 : duty7seg <= 7'b1011111;
-			default: duty7seg <= 7'b1101111;
+			default  : duty7seg <= 7'b1101111;
 		endcase
 	end
 	
